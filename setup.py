@@ -2,13 +2,13 @@ from setuptools import setup
 
 setup(
    name='dsbot',
-   version='0.1.0',
+   version='0.0.2',
    author='Jefry',
    author_email='jefry.sastre@gmail.com',
    packages=['dsbot'],
    url='http://pypi.python.org/pypi/dsbot/',
    license='LICENSE.txt',
-   description='Chatbot framework',
+   description='Chatbot framework ...',
    install_requires=[
       'matplotlib==3.3.1',
       'nltk==3.5',
