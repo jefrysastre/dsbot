@@ -21,8 +21,19 @@ class BotConfig:
         if 'force_training' in kwargs:
             self.force_training = kwargs['force_training']
 
-        # Corpus
+        # Commands
         self.commands = commands
+
+        # Add extension commands
+        if 'extensions' in kwargs:
+            for cmd in kwargs['extensions']:
+                self.commands[cmd.tag] = cmd
+
+        # replace commnds with new registered commands
+        if 'commands' in kwargs:
+            self.commands = kwargs['commands']
+
+        # Corpus
         self.corpus_save_path = "{0}corpus.pickle".format(self.save_path)
         self.corpus = BagOfWordsCorpus(self.corpus_save_path, commands, verbose = False, force_training=self.force_training)
         # self.corpus = BERTCorpus(self.corpus_save_path, commands, verbose = False, force_training=self.force_training)
@@ -38,7 +49,7 @@ class BotConfig:
 
         # Suggestion model
         self.suggestion_save_path = "{0}suggest.corpus.pickle".format(self.save_path)
-        self.suggestion = SuggestionManager(self.suggestion_save_path, commands)
+        self.suggestion = SuggestionManager(self.suggestion_save_path, commands, force_training=self.force_training)
         if 'suggestion' in kwargs:
             self.suggestion = kwargs['suggestion']
 

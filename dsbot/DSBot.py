@@ -4,13 +4,12 @@ from .utils.BotConfig import BotConfig
 from .commands.base.speech import Speech
 
 
-
 class DSBot:
 
     def __init__(self, **kwargs):
-        self.config = BotConfig(**kwargs)
+        self.initial_config = kwargs
+        self.config = BotConfig(**self.initial_config)
         self.speech_manager = Speech(self.config)
-
         self.bot = self.config.bot
         self.corpus = self.config.corpus
         self.commands = self.config.commands
@@ -125,3 +124,22 @@ class DSBot:
         print("Failed 0.5: {0}".format(wrong_cases_5))
         print("Failed 0.6: {0}".format(wrong_cases_6))
         print("Failed 0.7: {0}".format(wrong_cases_7))
+
+    def register(self, cmd):
+        # add command to the config
+        if 'commands' not in self.initial_config:
+            self.initial_config['commands'] = self.config.commands
+        self.initial_config['commands'][cmd.tag] = cmd
+
+    def train(self):
+        old_force_training = self.config.force_training
+        self.initial_config['force_training']= True
+
+        self.config = BotConfig(**self.initial_config)
+        self.speech_manager = Speech(self.config)
+        self.bot = self.config.bot
+        self.corpus = self.config.corpus
+        self.commands = self.config.commands
+
+        self.config.force_training = old_force_training
+

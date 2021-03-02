@@ -7,7 +7,7 @@ from sklearn.preprocessing import LabelEncoder
 
 class SuggestionManager:
 
-    def __init__(self, save_path, commands):
+    def __init__(self, save_path, commands, force_training=False):
         self.path = save_path
         self.log = []
 
@@ -27,12 +27,12 @@ class SuggestionManager:
             ])
         }
 
-        if not os.path.exists(self.path):
-            with open(self.path, 'wb') as file:
-                pickle.dump(self.config, file)
-        else:
+        if os.path.exists(self.path) and force_training == False:
             with open(self.path, 'rb') as file:
                 self.config = pickle.load(file)
+        else:
+            with open(self.path, 'wb') as file:
+                pickle.dump(self.config, file)
 
         self.model = DecisionTreeClassifier(random_state=0)
         if len(self.config['data']) > 0:

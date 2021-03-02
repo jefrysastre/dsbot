@@ -93,7 +93,6 @@ class LoadDatasetCommand(CommandWithArgs):
             dataframe = pd.read_csv(dataset_path)
             context[dataset_name] = dataframe
 
-
     def generate_code(self, code_generator, context):
         code_generator.write("")
         code_generator.write("# Load Dataset")
