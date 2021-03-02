@@ -1,11 +1,11 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 
 setup(
    name='dsbot',
    version='0.0.2',
    author='Jefry',
    author_email='jefry.sastre@gmail.com',
-   packages=['dsbot'],
+   packages=find_packages(),
    url='http://pypi.python.org/pypi/dsbot/',
    license='LICENSE.txt',
    description='Chatbot framework ...',
