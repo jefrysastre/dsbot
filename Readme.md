@@ -8,6 +8,9 @@
 Install and update using `pip`:
 
 * `pip install -U dsbot `
+* Open the python console and download nltk packages
+  * `import nltk`
+  * `nltk.download('stopwords')`
 
 
 ## A Simple Example

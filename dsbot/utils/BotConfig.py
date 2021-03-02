@@ -1,3 +1,5 @@
+import os
+
 from ..commands import commands
 from ..corpus import BagOfWordsCorpus, BERTCorpus
 from ..bots import DenseNetBot, Dense128NetBot
@@ -15,6 +17,9 @@ class BotConfig:
         self.save_path= 'data/'
         if 'save_path' in kwargs:
             self.save_path = kwargs['save_path']
+
+        if not os.path.exists(self.save_path):
+            os.makedirs(self.save_path)
 
         # self.force_training = True
         self.force_training = False

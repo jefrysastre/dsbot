@@ -1,14 +1,23 @@
 from setuptools import setup, find_packages
+from setuptools.command.install import install as _install
+
+
+class Install(_install):
+    def run(self):
+        _install.do_egg_install(self)
+        import nltk
+        nltk.download("stopwords")
 
 setup(
    name='dsbot',
-   version='0.0.2',
+   version='0.0.4',
    author='Jefry',
    author_email='jefry.sastre@gmail.com',
    packages=find_packages(),
    url='http://pypi.python.org/pypi/dsbot/',
    license='LICENSE.txt',
    description='Chatbot framework ...',
+   cmdclass={'install': Install},
    install_requires=[
       'matplotlib==3.3.1',
       'nltk==3.5',
@@ -25,4 +34,6 @@ setup(
       'Keras==2.4.3',
       'sentence-transformers==0.3.8'
    ],
+   setup_requires=['nltk']
 )
+
