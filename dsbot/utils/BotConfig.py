@@ -1,4 +1,6 @@
 import os
+import nltk
+import ssl
 
 from ..commands import commands
 from ..corpus import BagOfWordsCorpus, BERTCorpus
@@ -20,6 +22,15 @@ class BotConfig:
 
         if not os.path.exists(self.save_path):
             os.makedirs(self.save_path)
+
+        # verify nltk packages
+        try:
+            _create_unverified_https_context = ssl._create_unverified_context
+        except AttributeError:
+            pass
+        else:
+            ssl._create_default_https_context = _create_unverified_https_context
+        nltk.download("stopwords")
 
         # self.force_training = True
         self.force_training = False

@@ -27,8 +27,41 @@ class Speech(Command):
 
     def next(self, text):
         self.ExpertiseAnalyzer.analyze(text)
-        response = self.status.forward(text, context=self.context)
-        print("User Config: {0}".format(self.ExpertiseAnalyzer.user_config))
+
+        #verify for cancel command intention
+        wrds = self.corpus.encode(text).reshape(1, -1)
+        # call the bot model to identify the tag
+        results = self.bot.answer(wrds)
+        max_result = np.max(results)
+
+        # print("labels: {0}".format(self.corpus.labels))
+        # print("results: {0}".format(results[0]))
+
+        if max_result > .5:
+            results_index = np.argmax(results)
+            tag = self.corpus.labels[results_index]
+            if tag == 'cancel_action':
+                if len(self.children) > 0:
+                    previous_command = self.children[-1]
+                    self.children.remove(previous_command)
+                    self.status = self
+                    return {
+                        "status": self,
+                        "tag": "cancel_action",
+                        "message": "Commando cancelado",
+                        "context": self.context
+                    }
+            else:
+                response = self.status.forward(text, context=self.context)
+                print("User Config: {0}".format(self.ExpertiseAnalyzer.user_config))
+
+        else:
+            return {
+                "status": self,
+                "tag": "unknown",
+                "message": "Nao entendi. Pode tentar novamente.",
+                "context": self.context
+            }
 
         # save the next status.
         self.status = response["status"]
@@ -74,7 +107,7 @@ class Speech(Command):
                 "status": self,
                 "tag":"unknown",
                 "message": "Nao entendi. Pode tentar novamente.",
-                "context": {}
+                "context": self.context
             }
 
     # root backwards

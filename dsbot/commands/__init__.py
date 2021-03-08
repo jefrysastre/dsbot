@@ -4,6 +4,7 @@ from .base.goodbye import GoodbyeCommand
 from .base.generate_code import GenerateScriptCommand
 from .base.predict import PredictCommand
 from .base.suggest import SuggestCommand
+from .base.cancel_action import CancelCommand
 
 from .context.load_dataset import LoadDatasetCommand
 
@@ -35,6 +36,7 @@ commands = {
     GenerateScriptCommand.tag: GenerateScriptCommand,
     PredictCommand.tag: PredictCommand,
     SuggestCommand.tag: SuggestCommand,
+    CancelCommand.tag: CancelCommand,
 
     LoadDatasetCommand.tag: LoadDatasetCommand,
 
