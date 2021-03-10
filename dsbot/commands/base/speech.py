@@ -53,7 +53,7 @@ class Speech(Command):
                     }
             else:
                 response = self.status.forward(text, context=self.context)
-                print("User Config: {0}".format(self.ExpertiseAnalyzer.user_config))
+                # print("User Config: {0}".format(self.ExpertiseAnalyzer.user_config))
 
         else:
             return {
@@ -85,7 +85,7 @@ class Speech(Command):
         if max_result > .5:
             results_index = np.argmax(results)
             tag = self.corpus.labels[results_index]
-            print(tag)
+            # print(tag)
 
             # generate a new child for de speech AST
             _new_command = self.commands[tag]

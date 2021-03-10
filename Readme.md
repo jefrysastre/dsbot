@@ -200,3 +200,9 @@ if __name__ == '__main__':
 ```
 
 Congrats, You have created your first command using DSBot. For a list of available commands refer to : [Commands](http://)
+
+## The *force_training* parameter
+
+The system requires several files such as the corpus, the bot (tensorflow files), among others. When we add new commands or extend the base commands with new ones, we must recreate those files. otherwise the system will load old files without the new commands.
+To summarize, the main.py needs to have the same number of commands as the files in the data folder. For example, if we add the *ColumnNameCommand* in the extend parameter without the *force_training* parameter set to true, the system will load old serialized files and return an error. The loaded commands does not match the extended commands.
+To force the training and serialization of new files, we can use the *force_training* parameter set to true.

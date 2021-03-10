@@ -19,7 +19,7 @@ from setuptools import setup, find_packages
 
 setup(
    name='dsbot',
-   version='0.0.4',
+   version='0.0.6',
    author='Jefry',
    author_email='jefry.sastre@gmail.com',
    packages=find_packages(),

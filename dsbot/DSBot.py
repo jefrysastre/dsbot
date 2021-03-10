@@ -26,14 +26,15 @@ class DSBot:
                 print("Bot: Nao entendi. Pode tentar novamente.")
                 continue
 
-            print("You: {0}".format(text))
+            # print("You: {0}".format(text))
 
             response = self.speech_manager.next(text)
 
             tag = response["tag"]
             message = response["message"]
 
-            print("Bot: {0}".format(response))
+            # print("Bot: {0}".format(response))
+            print("Bot: {0}".format(message))
 
             # exit the while loop
             if tag == 'goodbye':

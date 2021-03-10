@@ -16,7 +16,7 @@ class LoadDatasetCommand(CommandWithArgs):
 
     def __init__(self, parent, task_manager):
         super(LoadDatasetCommand, self).__init__(parent, task_manager)
-        self.responses = ["Posso carregar o dataset {dataset_name}."]
+        self.responses = ["Posso carregar o dataset."]
         self.user_config_tag = 'preprocessing'
 
         self.default_datasets={
@@ -84,7 +84,7 @@ class LoadDatasetCommand(CommandWithArgs):
 
         if dataset_name in self.default_datasets:
             dataframe = self.load_defaults(dataset_name)
-            print(dataframe)
+            # print(dataframe)
             context[dataset_name] = dataframe
 
         else:

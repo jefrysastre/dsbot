@@ -40,7 +40,7 @@ class SuggestionManager:
 
     def add(self, cmd , user_preferences):
 
-        print(self.predict(user_preferences))
+        # print(self.predict(user_preferences))
 
         # check for high values in the user preferences
         found = False
