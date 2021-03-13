@@ -1,18 +1,20 @@
 ## Installing
 
-Install and update using [pip](https://pypi.org/project/pip/):
+Install and update using [pip](https://github.com/jefrysastre/dsbot#installing):
 
 * `pip install -U dsbot`
 
 
 ## Study
 
-Crie um chat bot capaz de executar as seguintes tarefas utilizado a ferramenta **dsbot**:
+Nosso estudo consiste em extender um framework para criar chatbots, mais antes de tudo vamos entender o tutorial da ferramenta [dsbot](https://github.com/jefrysastre/dsbot)
 
-* Carrege o dataset IRIS. O dataset IRIS ja faz parte da ferramenta no comando *LoadDatasetCommand*
+Crie um chat bot capaz de executar as seguintes tarefas utilizado a ferramenta **dsbot**. 
+Para criar os commandos novos vc tem que extender a ferramenta. Para extender a ferramenta siga os exemplos do link: [Tutorial](https://github.com/jefrysastre/dsbot#creating-new-commands)
+
 * Mostre o cabeçalho do dataset (as 5 primeiras linhas).
 * Aplique uma transformação logaritmica na primeira coluna. 
-* Calcule a mediana da primeira coluna
 * Salve o dataset na pasta **data/**
 
-As treis ultimas tarefas (Mostrar cabeçalho, transformação log e salvar dataset) tem que ser criadas extendendo o framework seguindo o manual de usuario.
+Depois de implementar os commandos acima. Rode o bot e teste os commandos no dataset iris que ja existe na ferramenta.
+Para carregar o dataset escreva algo do tipo: _vamos carregar o dataset iris_

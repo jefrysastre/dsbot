@@ -16,7 +16,7 @@ class LoadDatasetCommand(CommandWithArgs):
 
     def __init__(self, parent, task_manager):
         super(LoadDatasetCommand, self).__init__(parent, task_manager)
-        self.responses = ["Posso carregar o dataset."]
+        self.responses = ["Dataset carregado."]
         self.user_config_tag = 'preprocessing'
 
         self.default_datasets={

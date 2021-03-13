@@ -42,3 +42,6 @@ class CommandWithArgs(Command):
 
     def backward(self, tag, text, context):
         return self.forward(text, context)
+
+    def add_argument(self, arg):
+        self.children.append(arg)
