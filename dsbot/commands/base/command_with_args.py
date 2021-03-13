@@ -1,6 +1,7 @@
 import random
 
 from .command import Command
+from .argument import Argument
 
 
 class CommandWithArgs(Command):
@@ -45,3 +46,13 @@ class CommandWithArgs(Command):
 
     def add_argument(self, arg):
         self.children.append(arg)
+
+    def create_argument(self, name, trigger):
+        setattr(self, name, Argument({
+            'parent': self,
+            'name': name,
+            'trigger': trigger,
+            'position': 1
+        }))
+        self.add_argument(getattr(self,name))
+

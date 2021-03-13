@@ -73,14 +73,7 @@ class ColumnNameCommand(CommandWithArgs):
     def __init__(self, parent, task_manager):
         super(ColumnNameCommand, self).__init__(parent, task_manager)
         self.responses = ["Posso mostrar as colunas do dataset"]
-    
-        self.dataset_name = Argument({
-            'parent': self,
-            'name': 'dataset_name',
-            'trigger': 'dataset',
-            'position': 1
-        })
-        self.add_argument(self.dataset_name)
+        self.create_argument("dataset_name", "dataset")
 ```
 Note that we have a new import statement `from dsbot.commands.base.argument import Argument`
 
@@ -101,14 +94,7 @@ class ColumnNameCommand(CommandWithArgs):
     def __init__(self, parent, task_manager):
         super(ColumnNameCommand, self).__init__(parent, task_manager)
         self.responses = ["Posso mostrar as colunas do dataset"]
-    
-        self.dataset_name = Argument({
-            'parent': self,
-            'name': 'dataset_name',
-            'trigger': 'dataset',
-            'position': 1
-        })
-        self.add_argument(self.dataset_name)
+        self.create_argument("dataset_name", "dataset")
 
     def run(self, context):
         dataset_name = self.dataset_name.value
@@ -138,14 +124,7 @@ class ColumnNameCommand(CommandWithArgs):
     def __init__(self, parent, task_manager):
         super(ColumnNameCommand, self).__init__(parent, task_manager)
         self.responses = ["Posso mostrar as colunas do dataset"]
-    
-        self.dataset_name = Argument({
-            'parent': self,
-            'name': 'dataset_name',
-            'trigger': 'dataset',
-            'position': 1
-        })
-        self.add_argument(self.dataset_name)
+        self.create_argument("dataset_name", "dataset")
 
     def run(self, context):
         dataset_name = self.dataset_name.value
