@@ -53,11 +53,9 @@ class ColumnNameCommand(CommandWithArgs):
 ```
 
 Our command **ColumnNameCommand** must know from which dataset it has to list the columns.
-So, we need to add a parameter(**dataset_name**). The list of arguments of the command its is called **children**.
-Also, we have to prepare the bot answers(**responses**) and a group(**user_config_tag**) for this new command. 
-To do this, we setup the **__init__** method. 
-Our command fits in the pre-processing group since we are listing all the columns in a dataset.
-All commands must fit into one of the following groups: (pre-processing, )
+So, we need to add a parameter(**dataset_name**).
+Also, we have to prepare the bot answers(**responses**). 
+To do this, we setup the **__init__** method.
 
 
 ```python
