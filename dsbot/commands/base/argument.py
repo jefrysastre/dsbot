@@ -51,6 +51,16 @@ class Argument(Command):
 
     def forward(self, text, context):
         self.process(text)
+
+        # if parameter omitted we use the last one found in context
+        if self.name in context:
+            self.value = context[self.name]
+            self.complete = True
+
+        if self.trigger in context:
+            self.value = context[self.trigger]
+            self.complete = True
+
         if self.complete:
             return self.parent.backward(None, text, context)
         else:

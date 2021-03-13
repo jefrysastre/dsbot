@@ -53,7 +53,7 @@ class ColumnNameCommand(CommandWithArgs):
 ```
 
 Our command **ColumnNameCommand** must know from which dataset it has to list the columns.
-So, we need to add a parameter(**dataset_name**).
+So, we need to add a parameter(**dataset_name**). The method **create_dataset** receives the dataset name and a trigger phrase.
 Also, we have to prepare the bot answers(**responses**). 
 To do this, we setup the **__init__** method.
 

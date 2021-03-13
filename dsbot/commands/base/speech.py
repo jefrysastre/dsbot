@@ -34,9 +34,6 @@ class Speech(Command):
         results = self.bot.answer(wrds)
         max_result = np.max(results)
 
-        # print("labels: {0}".format(self.corpus.labels))
-        # print("results: {0}".format(results[0]))
-
         if max_result > .5:
             results_index = np.argmax(results)
             tag = self.corpus.labels[results_index]
@@ -51,21 +48,12 @@ class Speech(Command):
                         "message": "Commando cancelado",
                         "context": self.context
                     }
-            else:
-                response = self.status.forward(text, context=self.context)
+
                 # print("User Config: {0}".format(self.ExpertiseAnalyzer.user_config))
 
-        else:
-            return {
-                "status": self,
-                "tag": "unknown",
-                "message": "Nao entendi. Pode tentar novamente.",
-                "context": self.context
-            }
-
         # save the next status.
+        response = self.status.forward(text, context=self.context)
         self.status = response["status"]
-
         return response
 
     def propagate_text(self, text):

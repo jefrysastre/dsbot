@@ -82,16 +82,18 @@ class LoadDatasetCommand(CommandWithArgs):
     def run(self, context):
         dataset_name = self.dataset_name_arg.value
 
-        if dataset_name in self.default_datasets:
+        if dataset_name.lower() in self.default_datasets:
             dataframe = self.load_defaults(dataset_name)
             # print(dataframe)
             context[dataset_name] = dataframe
+            context[self.dataset_name_arg.name] = dataset_name
 
         else:
             import pandas as pd
             dataset_path = self.dataset_path_arg.value
             dataframe = pd.read_csv(dataset_path)
             context[dataset_name] = dataframe
+            context["last_used_dataset"] = dataframe
 
     def generate_code(self, code_generator, context):
         code_generator.write("")
