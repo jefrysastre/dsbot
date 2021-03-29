@@ -153,7 +153,7 @@ if __name__ == '__main__':
 
     bot_options = {
         'save_path': "data/",
-        # 'force_training': True,
+        'force_training': True,
 
         'extensions': [
             ColumnNameCommand
