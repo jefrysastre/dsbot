@@ -31,6 +31,8 @@ class BotConfig:
         else:
             ssl._create_default_https_context = _create_unverified_https_context
         nltk.download("stopwords")
+        nltk.download("punkt")
+        nltk.download("rslp")
 
         # self.force_training = True
         self.force_training = False
