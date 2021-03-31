@@ -60,7 +60,6 @@ To do this, we setup the **__init__** method.
 
 ```python
 from dsbot.commands.base.command_with_args import CommandWithArgs
-from dsbot.commands.base.argument import Argument
 
 class ColumnNameCommand(CommandWithArgs):
 
@@ -75,8 +74,7 @@ class ColumnNameCommand(CommandWithArgs):
         self.responses = ["Posso mostrar as colunas do dataset"]
         self.create_argument("dataset_name", "dataset")
 ```
-Note that we have a new import statement `from dsbot.commands.base.argument import Argument`
-
+The *create_argument* function will create a property *dataset_name* to save the dataset parameter. In fact, the argument extraction will use regular expressions to select what the user types after the word *dataset*. For instance, when the user types "vamos carregar o dataset iris". The system will understand the dataset_name values as "iris". Just the word after the "dataset" trigger.
 At this point, we have a base command with a dataset argument, but with the default functionality. To override the default behavior we override the **run**  method.
 
 ```python
