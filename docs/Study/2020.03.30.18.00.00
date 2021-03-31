@@ -1,0 +1,7 @@
+Tutorial phase:
+- The user question the create_argument function and wanted to understand better the paramenters and how they worked.
+
+Study phase:
+- During the LogTransformCommand the user wanted to separate this command in two separated commands. One to select a column from a dataset and another to apply the log transformation.
+
+- The user ispected the system package and read the source code of the Argument base class to understand how the parameters were extracted. Also read the CommandWithArgs class to check the run base logic.

@@ -1,0 +1,9 @@
+Tutorial phase:
+
+Study phase:
+- During third task (test the commands) the user ommitted intentionaly the dataset argument. However the system uses the last reference to that argument. In this case was the dataset argument and the system used the reference from the LoadDatasetCommand.
+
+When the user typed:
+    - vamos carregar o dataset iris
+
+the system stored a reference to the dataset iris and will used in any command that requires a dataset when the user does not specific the dataset argumetn explicitly.

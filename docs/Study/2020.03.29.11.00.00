@@ -1,0 +1,15 @@
+Tutorial phase:
+- The user had certain difficulties with POO, I had to provide a basic explanation about call inherance and how override base methods.
+
+Study phase:
+- The user call the HeadCommand without a dataset loaded. When the system as for a dataset the user expected that the system loaded a dataset in the middle of the argument resolution process. Lets explain better in the following dialogue:
+
+    - oi
+    - Bot: Olá
+    - mostre as primeiras linhas do dataset
+    - Bot: Qual é o valor do dataset_name?
+    - iris
+
+The command HeadCommand has an argument called dataset_name. There are no active references of previous dataset_name arguments in the context, so the command ask the user for the argument value. When the user typed iris there was confussion. the system was expection the argument value to complete the HeadCommand while the user expected the system to load the dataset at that point. 
+
+This functionality could be implemented for some known dataset. However, most of the datasets requires a name (to be referenced later) and a path (to actually load the dataset).
