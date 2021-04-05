@@ -1,0 +1,5 @@
+Tutorial:
+
+    - During the installation, the users has the python3 version 3.8.2 adn there is no tensorflow==2.3.0 for this paython version.
+    So we had to turn around this installation problem with a manual installation of the dsbot.
+Study:

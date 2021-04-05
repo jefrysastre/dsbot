@@ -1,0 +1,11 @@
+Tutorial:
+
+    - Clean installation in python version 3.8.5 with a virtual env.
+    - The user didn't know pnadas and numpy packages, so i recomended a basic reading of the head nad np.log functions before the study.
+    - The user question the extension module presented in the tutorial and state that he was expecting and extension folder to create its own commands.
+    - Theu user found the docuemntation self-explainable and very usefull.
+Study:
+
+    - The user used the translator to create the phrases and the responses.
+    - The user implemented the generate_code method for the first command, but didn't create the generate_code method for the second command. The user realized that it was not necessary to complete the tutorial after the tests of the first HeaderCommand.
+    - The user attempted to show the dataset header without loading a dataset. The user was expecting that the bot load the dataset while resolving the HeaderCommand argument.

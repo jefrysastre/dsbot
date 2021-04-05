@@ -1,0 +1,9 @@
+Tutorial:
+
+    - Clean installation in python version 3.7.9 with a virtual env.
+    - The user has multiple python versions and we had to change the window environemt path variables to point to the right python version.
+    - The user ask whether the second command has to replace the dataset column or just print the log values.
+Study:
+
+    - The user question how the argumet values were extracted in the function create_argument and how the string "dataset_name" transforment into an instace property self.dataset_name.
+    - The user left the super() python method with the referece to the copied ColumnNameCommand class but realize the error on the first review.

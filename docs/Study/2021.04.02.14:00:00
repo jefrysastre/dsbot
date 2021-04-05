@@ -1,0 +1,12 @@
+Tutorial:
+
+    - Clean installation using pycharm virtual env.
+    - The user find usefull the minimal example and argue that it was ver simple to create a chatbot with the default commands.
+Study:
+    - The user had troubles to realize if how to assign a tag to a command and question if there were a finite number of available tags or if he could create a new one.
+
+    - The user received an error on the first un attempt due to inheritance __init__ problem. The user called the wrong super class.
+
+    - The user commented the generate_code method becuse it was not use in the study. 
+
+    - The user argu that the tools require knowled of POO to use the class hierarchy.

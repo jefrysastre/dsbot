@@ -1,0 +1,14 @@
+Tutorial:
+    - The user debugged the tutorial to understan the variables and their values. Also to understand how the dataset name was extracted and realize the mix of machine learnign models and regular expressions to process the users input.
+
+    - the users question how the context parameters worked, what variables are stored and where.
+
+
+Study:
+
+    - The user didnt understand what the generate_code method was for and states that it is not clear why the generate_code method should be in the commands.
+
+    - The user was the first one to realize that the line 
+    "from dsbot.commands.base.argument import Argument" has no use at all. Other users didnt question tha imports.
+
+    - The user tried to execute the HeadCommand without a loaded dataset and received an error. The users recommeded to retun a more adequate response to the user.

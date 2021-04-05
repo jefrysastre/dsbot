@@ -1,0 +1,8 @@
+Tutorial:
+
+    - Clean installation in python version 3.8.5 with a virtual env.
+Study:
+
+    - The user used the translator to create the phrases and the responses.
+    - The user left the super() python method with the referece to the copied ColumnNameCommand class and struggle to fix the error. Because the code didn't break and return an error, but show unexpected results.
+    - The user undestard that the HeaderCommand and the LogTransformCommand should be in the same class. So, a sinlge command to perform both actions, however ended up doing separate commands.

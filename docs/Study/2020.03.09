@@ -1,4 +1,0 @@
-During the installation process we got a error. 
-We miss some nltk libraries duing installation.
-During the pilot test we had include the "stopwords" library but we 
-were still missing the "punkt" and the "rslp" libraries.

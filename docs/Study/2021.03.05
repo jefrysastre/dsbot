@@ -1,0 +1,9 @@
+Pilot:
+- We remove the thrid command SaveDataset. dou to time restrictions. We wanted to complete the study in 1 hour.
+    - 20 mins to install and do the tutorial ColumnNameCommand
+    - 40 mis to do the study.
+
+- After that we pass the google forms link to fill afterwards.
+
+- One important suggestion was to create argument references in the running context to resolve omitted arguments sucha s the dataset.
+

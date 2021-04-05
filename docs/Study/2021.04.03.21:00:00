@@ -1,0 +1,8 @@
+Tutorial:
+
+    - Clean installation in python version 3.7.5 with a virtual env.
+    - The user didn't know pnadas and numpy packages, so i recomended a basic reading of the head na dnp.log functions before the study.
+Study:
+
+    - The user prepare 6 to 7 example phrases for each command.
+    - The user left the generate command copied from the tutorial without updating the code generated into the python script. So, the HeaderCommand should generate the code of the ColumnNameCommand.

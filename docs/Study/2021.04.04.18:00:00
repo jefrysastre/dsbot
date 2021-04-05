@@ -1,0 +1,10 @@
+Tutorial:
+
+    - The user didn't have python3 installed on the PC, so we downloaded and installed python version 3.7.9 from the official python website.
+    - The user found the installation process very simple throung the pip command.
+
+Study:
+
+    - The user state that he had user python sometimes but not recently, this was pretty clear when he started to place semicolons at the end of each line. However, he quickly noticed and remove all the semicolons.
+    - The user inspected the base class CommandsWithArgs to understand how the create_args method works internally. Once he read the create_argument and the Argument base class, the user understand that arguments are extracted with regular expressions.
+    - The user forgot to add the HeaderCommand to the 'extensions' option and didn't understand why the bot couldn't recognize the intention.
