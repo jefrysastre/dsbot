@@ -1,0 +1,9 @@
+-Tutorial:
+
+    - The user received an error of "No space left on device"with 5GB of free space. The user free more space an had a clean installation, however the library requires only around 2GB (due to tensorflow and pytorch).
+
+- Study:
+
+    - The user ask if every command requires a new class or if it was possible to create several commands in the same class. In fact, there is possible to do several action in the run method, however it is not intended.
+
+    - The user forgot to call the right super class on the constructor and recevied an error, however he quicky notice and fix the error.

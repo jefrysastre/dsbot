@@ -1,0 +1,11 @@
+Tutorial:
+
+    - The user didn't have python3 installed on the PC, so we downloaded and installed python version 3.7.9 from the official python website.
+    - The user found the installation process very simple throung the pip command.
+
+Study:
+
+    - The user ask if the dataset was already loaded when the bot started the second time. The user suggested that this could be an option of teh bot. Some users may preffer to keep the dataset loaded throug several runs while other load a diferent dataset every time.
+    - The user tested all the phrases of the command to check if the bot answer properly all the times.
+    - The user ommited intentionaly the dataset name for the HeaderCommand using phrases such as "mostre as primeiras linhas do dataset".
+    - The users didn't add the LogTransformComamnd to the 'extensions' bot options on the first try and the bot map the phrase to different action.

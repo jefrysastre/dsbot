@@ -1,0 +1,8 @@
+- Tutorial:
+
+    - The installation took over 1:30 hours! The computer had no SSD hard drive and the internet speed was very low at the time.
+
+- Study:
+
+    - The user didn't understand the 'extensions' bot option and argue that the bot can extend only one command at a time. To overcome this dificulty the user create three diferent scripts, one for each command.
+    - The user tried to execute the HeaderCommand without loading a dataset and argue that he had previously loaded the dataset on the ColumnNameCommand tutorial. The user expected that the bot kept the dataset loaded throug several executions until he gave a command to delete he dataset.

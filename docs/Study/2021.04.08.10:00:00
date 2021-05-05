@@ -1,0 +1,10 @@
+Tutorial:
+
+    - The user first tried to use a python version 3.7.4 from anaconda3 but received ssl erroes accesing pip.
+    - The user downloaded python version 3.7.9 from the official python website.
+    - The user question the line "if __name__ == '__main__'". Later the user state that he had used python time a go but not recently.
+
+Study:
+
+    - The user copied the ColumnNameCommand and renamed to ColumnNamedComand2 (for the HeaderCommand) and ColumnNamedComand3 (for the LogTransformCommand).
+    - The user attemped to call "context[dataset_name].np.log"(No comments)

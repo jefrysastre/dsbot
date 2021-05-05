@@ -1,0 +1,11 @@
+- Tutorial:
+
+    - The user tried to use a python version inside anaconda3 and receive and error.
+    - The user also tried to install using python2.7 and got annther error.
+    - The user installed the library in python version 3.8.5.
+
+- Study:
+
+    - The user tried to override the tutorial example with the HeaderCommand but instead he duplicate the classes to keep the tutorial example.
+    - The user search the numpy.log function on the internet to see how it worked.
+    - The user replace the extensions everytime and argue that the extesion paramenter received only one command to extend.

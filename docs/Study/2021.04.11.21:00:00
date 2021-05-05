@@ -1,0 +1,9 @@
+Tutorial:
+
+    - The user found didn't have space to install the dsbot library. The dsbot depends on the tensorflow and pytorch libraries and the instalation requires around 1.5GB free space.
+
+Study:
+
+    - The user didnt understand the generate_code method and argue that he wouldn't be able to complete the task if they would have need the code_generate method.
+    - On the LogTransformCommand, the user created a second argument to pass the base of the logarithm. To call the command, the user omitted intentionally the log base to see how the bot will behave. the bot behave according to the user expectations and complete the study.
+    - The user demand a more complete and exausting documentation.

@@ -1,0 +1,9 @@
+- Tutorial:
+
+    - Clean instalatio n on python 3.8.5 with virtualenv
+
+- Study:
+
+    - The user didn't change the super class on the HeadCommand. The user ask if the super class ComamndWithArgs was an abstract class.
+    - The user maintained the variable name "df_column" for the dataset header.
+    

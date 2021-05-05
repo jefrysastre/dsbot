@@ -1,0 +1,12 @@
+Tutorial:
+
+    - The package didn't install on python 3.8.5 inside anaconda3. The pip requiered an ssl conection.
+    - We changed to MacOs and had a clean installation.
+
+Study:
+
+    - The user suggensted a parameter to capture the number of lines to show with the header function.
+    - The user implemented the generate_code method even when it was not necesary to complete the study.
+    - The user didn't create a dataset_name argument for the HeaderCommand command. The user argue that it was not necesary for that command. The user recevied an error "The command didn't have a dataset_name argument" and the user corrected the __init__ with the create_argument function.
+    - The user typed all the code instead copying from previous classes.
+    - the user apply a log transformation inplace.

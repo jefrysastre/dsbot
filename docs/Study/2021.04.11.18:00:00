@@ -1,0 +1,9 @@
+Tutorial:
+
+    - The user had to upgrade the pip package to update the references to the libraries.
+
+- Study:
+
+    - The user first thought that a new command will be a new argument on the constructor of the ColumnName command. However he quickly notice the mistake and created and new class. The user wanted to undertant the role of the create_argument function and how does it works.
+
+    - The user propored the creation of a new function on the dsbot instance to create a new command passing the required hotspots. So, the dsbot instance will sould have a method receiving the tag, patterns, responses, arguments and the action. This new method wiil create the command class internally. From his point of view reduces the complexity of the OOP and avoid mistakes soch as not calling the __init__ method of the CommandWithArgs.

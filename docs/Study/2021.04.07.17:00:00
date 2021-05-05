@@ -1,0 +1,13 @@
+- Turorial:
+
+    - The user didn't have python installed on the machine, so we download the python version 3.7.9 form the official python website.
+    - The user work with user experience and human-computer interaction and have little contact with python code.
+    - The user copied code from the tutorial and left the code woth a wrong indentation until run error.
+
+- Study:
+
+    - The user override the ColumnNameCommand with the HeaderCommand and left the same class name, user intention, __init__ method and arguments. The user didn't use the 'extensions' bot options beacuse he never change the class name.
+    - The user didn't implement the generate_code method, not even on the tutorial class.
+    - The user use the head function "head()", without the parenthesis and recevie an error.
+    - The user had to look how to get the first column of the dataset on the internet. The user argue that he had used numpy a long time a go. However, he started copying random code blocks from stackoverflow that had nothing to do with pandas indexers.
+    - Note: The user understand how the system works without basic python knowledge. 
